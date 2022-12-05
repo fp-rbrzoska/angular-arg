@@ -9,13 +9,17 @@
     "fp-arg": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:service": {
+          "skipTests": true
+      },
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "fp",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
