@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UnauthorizedAccessComponent } from './unauthorized-access/unauthorized-access.component';
+import { MyTestChildComponent } from './my-test-child/my-test-child.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UnauthorizedAccessComponent } from './unauthorized-access/unauthorized-
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    UnauthorizedAccessComponent
+    UnauthorizedAccessComponent,
+    MyTestChildComponent
   ],
   imports: [
     BrowserModule,
