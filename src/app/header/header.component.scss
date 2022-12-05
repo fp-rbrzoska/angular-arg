@@ -1,0 +1,8 @@
+a {
+  padding: 3px;
+  margin: 10px;
+  &.active {
+    color: red;
+    text-decoration: underline;
+  }
+}
