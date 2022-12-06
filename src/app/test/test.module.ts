@@ -5,12 +5,14 @@ import { TestRoutingModule } from './test-routing.module';
 import { MyTestChildComponent } from './my-test-child/my-test-child.component';
 import { MyTestComponent } from './my-test/my-test.component';
 import { TestService } from './test.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [MyTestChildComponent, MyTestComponent],
   imports: [
     CommonModule,
-    TestRoutingModule
+    TestRoutingModule,
+    SharedModule
   ],
   providers: [TestService]
 })
