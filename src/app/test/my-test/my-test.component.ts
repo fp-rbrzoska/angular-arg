@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { TestService } from '../core/test.service';
+import { TestService } from '../test.service';
 
 @Component({
   selector: 'fp-my-test',
