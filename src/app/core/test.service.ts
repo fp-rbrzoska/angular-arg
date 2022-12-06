@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
+@Injectable()
 export class TestService {
 
-  constructor( private router: Router) {
+  constructor() {
 
   console.log('test service init')}
 }
