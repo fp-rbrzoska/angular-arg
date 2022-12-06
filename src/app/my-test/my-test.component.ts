@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 })
 export class MyTestComponent {
 
+  data: string[] = ['one', 'two'];
   dataPassedToChild = "I am from parent component";
   handlePassDataToParentOutput(data: string) {
 

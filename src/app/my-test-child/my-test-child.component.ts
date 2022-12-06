@@ -13,8 +13,10 @@ export class MyTestChildComponent {
 
   myStyle = 'background-color: blue; color: white';
   childData = 'I am child'
+  showElement = false;
 
   clickHandler(event?: Event) {
+    this.showElement = !this.showElement;
     console.log(event)
 
 

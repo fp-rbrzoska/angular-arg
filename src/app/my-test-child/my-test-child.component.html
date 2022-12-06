@@ -1,3 +1,15 @@
-<p [attr.style]="myStyle" >{{ childData }}</p>
-<p>{{ myInputChildData | uppercase}}</p>
+<!-- <ng-template ngIf="showElement">
+    <p [attr.style]="myStyle" >{{ childData }}</p>
+</ng-template> -->
+<p [attr.style]="myStyle" *ngIf="showElement; else restOfMyViewVariable">{{ childData }}</p>
+
+
 <button (click)="clickHandler($event)" >Click!</button>
+
+
+
+
+<!-- all my templates -->
+<ng-template #restOfMyViewVariable>
+    <p>{{ myInputChildData | uppercase}}</p>
+</ng-template>

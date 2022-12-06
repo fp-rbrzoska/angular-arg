@@ -1,3 +1,7 @@
 <div class="red-box" fpTest fpHighlight="myHighlight">Test Parent</div>
 <fp-my-test-child fpTest fpTestBackgroundColor="pink" [myInputChildData]="dataPassedToChild" (passDataToParentOutput)="handlePassDataToParentOutput($event)" ></fp-my-test-child>
-<div fpTest="dsfdsfsd" >Test element</div>
+<div fpTest="dsfdsfsd">Test element</div>
+<ul>
+    <li *ngFor="let dataItem of data; let i = index; let o = odd" [ngClass]="{ odd: o}">{{i}}. {{dataItem}}</li>
+   </ul>
+
