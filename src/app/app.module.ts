@@ -13,6 +13,7 @@ import { UnauthorizedAccessComponent } from './unauthorized-access/unauthorized-
 import { MyTestChildComponent } from './my-test-child/my-test-child.component';
 
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

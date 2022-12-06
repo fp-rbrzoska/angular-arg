@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { TestService } from '../core/test.service';
 
 @Component({
   selector: 'fp-my-test',
@@ -11,6 +12,11 @@ export class MyTestComponent {
 
   data: string[] = ['one', 'two'];
   dataPassedToChild = "I am from parent component";
+
+  constructor(private testService: TestService) {
+    console.log(testService)
+  }
+
   handlePassDataToParentOutput(data: string) {
 
     console.log(data)
