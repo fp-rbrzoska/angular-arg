@@ -23,8 +23,10 @@ export class MyTestComponent implements OnInit {
   hotEventObs$!: Observable<Event>;
 
   private mySubj = new Subject<number>();
-  private myBSubj = new BehaviorSubject<string>('start');
-  my$ = this.mySubj.asObservable()
+  private myBSubj = new BehaviorSubject<string | null>(null);
+  value$ = this.myBSubj.asObservable();
+
+  value!: string | null;
 
 
   data: string[] = ['one', 'two'];
@@ -34,13 +36,18 @@ export class MyTestComponent implements OnInit {
     //this.obs1$.subscribe(val => console.log(val));
     this.mySubj.next(1)
     this.mySubj.next(2)
+    setTimeout(() => {
+
     this.myBSubj.next('start 2')
+    }, 2000)
 
     this.mySubj.subscribe(val => console.log(val));
-    this.myBSubj.subscribe(val => console.log(val));
+    this.myBSubj.subscribe(val => {
+       this.value = val;
+    });
 
-    this.myBSubj.next('start 3')
     this.mySubj.next(4)
+
   }
 
   ngOnInit(): void {

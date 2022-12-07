@@ -6,3 +6,8 @@
 </ul>
 
 <input #myInput>
+<ng-container *ngIf="(value$ | async) as dataValue; else loader">
+
+    <div >Obsrvable value: {{dataValue}}</div>
+</ng-container>
+<ng-template #loader>Loading....</ng-template>
