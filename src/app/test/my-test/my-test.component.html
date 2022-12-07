@@ -1,4 +1,6 @@
 <div class="red-box" fpTest fpHighlight="myHighlight">Test Parent</div>
+<button (click)="fetchData()">Fetch Data</button>
+{{testVal$ | async | json}}
 <fp-my-test-child fpTest fpTestBackgroundColor="pink" [myInputChildData]="dataPassedToChild" (passDataToParentOutput)="handlePassDataToParentOutput($event)" ></fp-my-test-child>
 <div fpTest="dsfdsfsd">Test element</div>
 <ul>

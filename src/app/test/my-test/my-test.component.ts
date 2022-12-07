@@ -11,7 +11,7 @@ import { TestService } from '../test.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MyTestComponent implements OnInit {
-
+  testVal$!: Observable<any>;
   @ViewChild('myInput', { static: true } ) myInput!: ElementRef<HTMLInputElement>
   obs$ = new Observable<string>(observer => {
     observer.next('one')
@@ -47,6 +47,7 @@ export class MyTestComponent implements OnInit {
     });
 
     this.mySubj.next(4)
+    this.testVal$ = testService.test$;
 
   }
 
@@ -66,5 +67,10 @@ export class MyTestComponent implements OnInit {
 
   pushDataToSubj(data: string) {
     this.myBSubj.next(data)
+  }
+
+  fetchData() {
+
+    this.testService.fetchTest();
   }
 }
