@@ -3,4 +3,8 @@
     <a routerLink="/test"  routerLinkActive="active">Test</a>
     <a routerLink="/products" routerLinkActive="active">Products</a>
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <button *ngIf="isLoggedIn$ | async; else logout" (click)="logOut()">Log Out</button>
+    <ng-template #logout>
+        <button  (click)="logIn()">Log In</button>
+    </ng-template>
 </nav>
